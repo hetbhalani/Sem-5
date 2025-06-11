@@ -1,0 +1,15 @@
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\lab-2.GeneratedMSBuildEditorConfig.editorconfig
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\lab-2.AssemblyInfoInputs.cache
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\lab-2.AssemblyInfo.cs
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\lab-2.csproj.CoreCompileInputs.cache
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\lab-2.sourcelink.json
+E:\Sem-5-labs\.NET\lab-2\bin\Debug\net8.0\lab-2.exe
+E:\Sem-5-labs\.NET\lab-2\bin\Debug\net8.0\lab-2.deps.json
+E:\Sem-5-labs\.NET\lab-2\bin\Debug\net8.0\lab-2.runtimeconfig.json
+E:\Sem-5-labs\.NET\lab-2\bin\Debug\net8.0\lab-2.dll
+E:\Sem-5-labs\.NET\lab-2\bin\Debug\net8.0\lab-2.pdb
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\lab-2.dll
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\refint\lab-2.dll
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\lab-2.pdb
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\lab-2.genruntimeconfig.cache
+E:\Sem-5-labs\.NET\lab-2\obj\Debug\net8.0\ref\lab-2.dll

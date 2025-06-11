@@ -3,42 +3,41 @@
 
 //---------------------------- 1 ------------------------------
 
-//class Cnadidate
-//{
-//    int id;
-//    string name;
-//    int age;
-//    int weight;
-//    int height;
+class Cnadidate
+{
+    int id;
+    string name;
+    int age;
+    int weight;
+    int height;
 
-//    public void getUserData()
-//    {
-//        Console.Write("ID: ");
-//        id = Convert.ToInt32(Console.ReadLine());
-//        Console.Write("Name: ");
-//        name = Console.ReadLine();
-//        Console.Write("Age: ");
-//        age = Convert.ToInt32(Console.ReadLine());
-//        Console.Write("Weight: ");
-//        weight = Convert.ToInt32(Console.ReadLine());
-//        Console.Write("Height: ");
-//        height = Convert.ToInt32(Console.ReadLine());
-//    }
+    public void getUserData()
+    {
+        Console.Write("ID: ");
+        id = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Name: ");
+        name = Console.ReadLine();
+        Console.Write("Age: ");
+        age = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Weight: ");
+        weight = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Height: ");
+        height = Convert.ToInt32(Console.ReadLine());
+    }
 
-//    public void setUserData()
-//    {
-//        Console.WriteLine(id);
-//        Console.WriteLine(name);
-//        Console.WriteLine(age);
-//        Console.WriteLine(weight);
-//        Console.WriteLine(height);
-//    }
-//}
+    public void setUserData()
+    {
+        Console.WriteLine(id);
+        Console.WriteLine(name);
+        Console.WriteLine(age);
+        Console.WriteLine(weight);
+        Console.WriteLine(height);
+    }
+}
 
 
 //-------------------------- 2 ------------------------
 
-using System.Globalization;
 
 class Staff {
     string name;
