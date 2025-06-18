@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QHrArGitiMQ=",
+  "success": true,
+  "projectFilePath": "E:\\Sem-5-labs\\.Net\\lab-1\\lab-1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.16\\microsoft.dotnet.ilcompiler.8.0.16.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.16\\microsoft.net.illink.tasks.8.0.16.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.16\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
