@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Sem-5-labs\\.Net\\ConsoleApp1\\lab-5.csproj",
+      "projectUniqueName": "E:\\Sem-5-labs\\.Net\\lab-5\\lab-5.csproj",
       "projectName": "lab-5",
-      "projectPath": "E:\\Sem-5-labs\\.Net\\ConsoleApp1\\lab-5.csproj",
+      "projectPath": "E:\\Sem-5-labs\\.Net\\lab-5\\lab-5.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "E:\\Sem-5-labs\\.Net\\ConsoleApp1\\obj\\",
+      "outputPath": "E:\\Sem-5-labs\\.Net\\lab-5\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio\\shared\\NuGetPackages"

@@ -3,6 +3,21 @@
   "WorkspaceRootPath": "E:\\Sem-5-labs\\.Net\\lab-1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D6CCA908-4C91-46F6-9775-7DC87F2F3FCA}|..\\ConsoleApp1\\ConsoleApp1.csproj|e:\\sem-5-labs\\.net\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC292B3D-995A-46D6-AF8C-F9C66ACBF4F3}|..\\lab-3\\lab-3.csproj|e:\\sem-5-labs\\.net\\lab-3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC292B3D-995A-46D6-AF8C-F9C66ACBF4F3}|..\\lab-3\\lab-3.csproj|e:\\sem-5-labs\\.net\\lab-3\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B916D0FF-CB49-4074-97D9-1F75449EFB95}|..\\lab-2\\lab-2.csproj|e:\\sem-5-labs\\.net\\lab-2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B916D0FF-CB49-4074-97D9-1F75449EFB95}|..\\lab-2\\lab-2.csproj|e:\\sem-5-labs\\.net\\lab-2\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C447ED68-00F9-41D0-BB4D-F5C981C3276E}|..\\lab-4\\lab-4.csproj|e:\\sem-5-labs\\.net\\lab-4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -28,24 +43,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-3\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\lab-3\\Class1.cs",
+              "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-3\\Class1.cs",
+              "RelativeToolTip": "..\\lab-3\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T02:59:25.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-2\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\lab-2\\Class1.cs",
+              "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-2\\Class1.cs",
+              "RelativeToolTip": "..\\lab-2\\Class1.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAkwHQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T02:55:57.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-3\\Program.cs",
+              "RelativeDocumentMoniker": "..\\lab-3\\Program.cs",
+              "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-3\\Program.cs",
+              "RelativeToolTip": "..\\lab-3\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T02:53:47.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-2\\Program.cs",
+              "RelativeDocumentMoniker": "..\\lab-2\\Program.cs",
+              "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-2\\Program.cs",
+              "RelativeToolTip": "..\\lab-2\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T02:53:20.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "..\\ConsoleApp1\\Program.cs",
+              "ToolTip": "E:\\Sem-5-labs\\.Net\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "..\\ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAwIEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T02:39:04.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Area2.cs",
               "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-4\\Area2.cs",
               "RelativeDocumentMoniker": "..\\lab-4\\Area2.cs",
-              "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-4\\Area2.cs*",
-              "RelativeToolTip": "..\\lab-4\\Area2.cs*",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvxgAAAAFAAAAAAAAAA==",
+              "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-4\\Area2.cs",
+              "RelativeToolTip": "..\\lab-4\\Area2.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T02:24:14.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Hospitals.cs",
               "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-4\\Hospitals.cs",
               "RelativeDocumentMoniker": "..\\lab-4\\Hospitals.cs",
@@ -58,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Banks.cs",
               "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-4\\Banks.cs",
               "RelativeDocumentMoniker": "..\\lab-4\\Banks.cs",
@@ -71,20 +151,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Area1.cs",
               "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-4\\Area1.cs",
               "RelativeDocumentMoniker": "..\\lab-4\\Area1.cs",
               "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-4\\Area1.cs",
               "RelativeToolTip": "..\\lab-4\\Area1.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAywAoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvwoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T01:56:22.993Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Overload1.cs",
               "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-4\\Overload1.cs",
               "RelativeDocumentMoniker": "..\\lab-4\\Overload1.cs",
@@ -97,12 +177,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Sem-5-labs\\.Net\\lab-4\\Program.cs",
               "RelativeDocumentMoniker": "..\\lab-4\\Program.cs",
-              "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-4\\Program.cs*",
-              "RelativeToolTip": "..\\lab-4\\Program.cs*",
+              "ToolTip": "E:\\Sem-5-labs\\.Net\\lab-4\\Program.cs",
+              "RelativeToolTip": "..\\lab-4\\Program.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAUwDEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T01:44:43.628Z",
