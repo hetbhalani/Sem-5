@@ -1,0 +1,15 @@
+E:\Sem-5-labs\.Net\ConsoleApp1\bin\Debug\net8.0\lab-5.exe
+E:\Sem-5-labs\.Net\ConsoleApp1\bin\Debug\net8.0\lab-5.deps.json
+E:\Sem-5-labs\.Net\ConsoleApp1\bin\Debug\net8.0\lab-5.runtimeconfig.json
+E:\Sem-5-labs\.Net\ConsoleApp1\bin\Debug\net8.0\lab-5.dll
+E:\Sem-5-labs\.Net\ConsoleApp1\bin\Debug\net8.0\lab-5.pdb
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\lab-5.GeneratedMSBuildEditorConfig.editorconfig
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\lab-5.AssemblyInfoInputs.cache
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\lab-5.AssemblyInfo.cs
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\lab-5.csproj.CoreCompileInputs.cache
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\lab-5.sourcelink.json
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\lab-5.dll
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\refint\lab-5.dll
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\lab-5.pdb
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\lab-5.genruntimeconfig.cache
+E:\Sem-5-labs\.Net\ConsoleApp1\obj\Debug\net8.0\ref\lab-5.dll
