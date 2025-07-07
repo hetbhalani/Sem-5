@@ -6,9 +6,9 @@ class TreeNode{
 
 public class mirrorTree {
     public static void main(String[] args) {
-        Integer[] tree = {1, 2, 2, 3, 4, 4, 3};
+        Integer[] tree = {1, 2, 2,null, 3, 3, null};
         TreeNode root = buildTree(tree, 0);
-        printInOrder(root);
+        printPostOrder(root);
         System.out.println();
         if (isMirror(root)) {
             System.out.println("mirror");
@@ -27,11 +27,11 @@ public class mirrorTree {
         return node;
     }
 
-    public static void printInOrder(TreeNode root) {
+    public static void printPostOrder(TreeNode root) {
         if (root == null) return;
         System.out.print(root.value + " ");
-        printInOrder(root.left);
-        printInOrder(root.right);
+        printPostOrder(root.left);
+        printPostOrder(root.right);
     }
 
     public static boolean isMirror(TreeNode root) {
