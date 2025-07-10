@@ -28,3 +28,11 @@ E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\n
 E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0\HospitalManagementSystem.pdb
 E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0\HospitalManagementSystem.genruntimeconfig.cache
 E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0\ref\HospitalManagementSystem.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\System.Data.SqlClient.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0\HospitalManagementSystem.csproj.AssemblyReference.cache
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0\Hospital.D08A6E9A.Up2Date

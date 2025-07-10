@@ -1,1 +1,30 @@
-﻿<h1>Doctor List page</h1>
+﻿@using System.Data
+@model DataTable
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Doctor Id</th>
+            <th>Name</th>
+            <th>Phone number</th>
+            <th>Email</th>
+            <th>Qualification</th>
+            <th>Specialization</th>
+            <th>Is Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr>
+                <td>@dr["DoctorID"]</td>
+                <td>@dr["Name"]</td>
+                <td>@dr["Phone"]</td>
+                <td>@dr["Email"]</td>
+                <td>@dr["Qualification"]</td>
+                <td>@dr["Specialization"]</td>
+                <td>@dr["IsActive"]</td>
+            </tr>
+        }
+    </tbody>
+</table>
