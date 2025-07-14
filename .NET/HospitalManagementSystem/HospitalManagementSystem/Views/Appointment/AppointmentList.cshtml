@@ -1,1 +1,30 @@
-﻿<h1>Appointment List</h1>
+﻿
+@using System.Data
+@model DataTable
+
+<h1>Appointment List</h1>
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Appointment ID</th>
+            <th>apt Date</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th>Remarks</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr>
+                <td>@dr["AppointmentID"]</td>
+                <td>@dr["AppointmentDate"]</td>
+                <td>@dr["AppointmentStatus"]</td>
+                <td>@dr["Description"]</td>
+                <td>@dr["SpecialRemarks"]</td>
+            </tr>
+        }
+    </tbody>
+</table>

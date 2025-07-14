@@ -6,7 +6,6 @@ namespace Hospital_Management_System.Controllers
 {
     public class DoctorController : Controller
     {
-        // GET: DoctorController
         private IConfiguration _configuration;
 
         public DoctorController(IConfiguration configuration)
@@ -32,6 +31,7 @@ namespace Hospital_Management_System.Controllers
         }
         public IActionResult DoctorAddEdit()
         {
+
             return View();
         }
 

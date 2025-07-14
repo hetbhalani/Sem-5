@@ -1,1 +1,29 @@
-﻿<h1>Department List</h1>
+﻿@using System.Data
+@model DataTable
+
+<h1>Department List</h1>
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Department ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>IsActive</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr>
+                <td>@dr["DepartmentID"]</td>
+                <td>@dr["DepartmentName"]</td>
+                <td>@dr["Description"]</td>
+                <td>@dr["IsActive"]</td>
+                
+            </tr>                                                   
+        }
+    </tbody>
+</table>
