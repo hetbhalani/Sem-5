@@ -22,7 +22,7 @@
                 <td>@dr["DepartmentName"]</td>
                 <td>@dr["Description"]</td>
                 <td>@dr["IsActive"]</td>
-                
+                <td> <a asp-action="DepartmentDelete" asp-controller="Department" asp-route-DepartmentID="@dr["DepartmentID"]">Delete</a> </td>
             </tr>                                                   
         }
     </tbody>

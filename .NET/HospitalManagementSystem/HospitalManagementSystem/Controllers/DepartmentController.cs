@@ -25,12 +25,29 @@ namespace HospitalManagementSystem.Controllers
             SqlCommand command = connection.CreateCommand();
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "PR_DEPT_SelectAll";
+
             SqlDataReader reader = command.ExecuteReader();
 
             DataTable table = new DataTable();
             table.Load(reader);
 
             return View(table);
+        }
+
+        public IActionResult DepartmentDelete(int DepartmentID){
+            string DbConnect = this._configuration.GetConnectionString("DbConnect");
+            SqlConnection connection = new SqlConnection(DbConnect);
+            connection.Open();
+
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "PR_DEPT_DeleteDepartment";
+
+            command.Parameters.Add("@DepartmentID", SqlDbType.Int).Value = DepartmentID;
+
+            command.ExecuteNonQuery();
+
+            return RedirectToAction("DepartmentList");
         }
     }
 }

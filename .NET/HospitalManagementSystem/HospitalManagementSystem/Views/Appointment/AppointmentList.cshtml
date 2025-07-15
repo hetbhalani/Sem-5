@@ -24,6 +24,8 @@
                 <td>@dr["AppointmentStatus"]</td>
                 <td>@dr["Description"]</td>
                 <td>@dr["SpecialRemarks"]</td>
+                <td> <a asp-action="AppointmentDelete" asp-controller="Appointment" asp-route-AppointmentID="@dr["AppointmentID"]">Delete</a> </td>
+
             </tr>
         }
     </tbody>

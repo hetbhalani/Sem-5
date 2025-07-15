@@ -1,1 +1,29 @@
-﻿<h1>UserList page</h1>
+﻿@using System.Data
+@model DataTable
+
+<h1>User Table</h1>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Is Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr>
+                <td>@dr["UserID"]</td>
+                <td>@dr["UserName"]</td>
+                <td>@dr["MobileNo"]</td>
+                <td>@dr["Email"]</td>
+                <td>@dr["IsActive"]</td>
+                <td> <a asp-action="UserDelete" asp-controller="User" asp-route-UserID="@dr["UserID"]">Delete</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>

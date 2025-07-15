@@ -32,5 +32,21 @@ namespace HospitalManagementSystem.Controllers
 
             return View(table);
         }
+        public IActionResult AppointmentDelete(int AppointmentID)
+        {
+            string DbConnect = this._configuration.GetConnectionString("DbConnect");
+            SqlConnection connection = new SqlConnection(DbConnect);
+            connection.Open();
+
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "PR_APT_Delete";
+
+            command.Parameters.Add("@AppointmentID", SqlDbType.Int).Value = AppointmentID;
+
+            command.ExecuteNonQuery();
+
+            return RedirectToAction("AppointmentList");
+        }
     }
 }
