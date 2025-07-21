@@ -8,7 +8,7 @@ void merge(int a[], int l, int mid, int r){
     int rightA [p2];
 
     for(int i = 0; i<p1; i++){
-        leftA[i] = a[l+1];
+        leftA[i] = a[l+i];
     }
     for(int j = 0; j<p2; j++){
         rightA[j] = a[mid+1+j];
@@ -40,10 +40,10 @@ void merge(int a[], int l, int mid, int r){
 
 void partition(int a[],int l, int r){
     if(l<r){
-        int mid = (r-l)/2;
+        int mid = l+(r-l)/2;
 
-        partition(a,l,mid-1);
-        partition(a,mid+1,r);
+        partition(a, l, mid);
+        partition(a, mid + 1, r);
 
         merge(a, l, mid, r);
     }
