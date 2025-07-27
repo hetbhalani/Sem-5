@@ -1,18 +1,26 @@
 ﻿@using System.Data
 @model DataTable
 
-<h1>Doctor Table</h1>
+@{
+    ViewData["Title"] = "Doctor List";
+}
 
-<table border="1" cellpadding="5" cellspacing="0">
-    <thead>
+<h1>Doctor List</h1>
+
+<!-- Button to navigate to Add/Edit page -->
+<a href="@Url.Action("DoctorAddEdit", "Doctor")" class="btn btn-success mb-3">Add New Doctor</a>
+
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
         <tr>
             <th>Doctor Id</th>
             <th>Name</th>
-            <th>Phone number</th>
+            <th>Phone</th>
             <th>Email</th>
             <th>Qualification</th>
             <th>Specialization</th>
             <th>Is Active</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +34,13 @@
                 <td>@dr["Qualification"]</td>
                 <td>@dr["Specialization"]</td>
                 <td>@dr["IsActive"]</td>
+                <td>
+                    <!-- Edit Button -->
+                    <a href="@Url.Action("DoctorAddEdit", "Doctor", new { DoctorID = dr["DoctorID"] })" class="btn btn-primary btn-sm">Edit</a>
+
+                    <!-- Delete Button (Confirm before deleting) -->
+                    <a href="@Url.Action("DoctorDelete", "Doctor", new { DoctorID = dr["DoctorID"] })" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this doctor?');">Delete</a>
+                </td>
             </tr>
         }
     </tbody>

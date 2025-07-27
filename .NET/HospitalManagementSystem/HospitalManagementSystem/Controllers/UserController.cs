@@ -13,7 +13,7 @@ namespace HospitalManagementSystem.Controllers
         {
             _configuration = configuration;
         }
-        
+
         public IActionResult UserList()
         {
             string DbConnect = this._configuration.GetConnectionString("DbConnect");
@@ -48,12 +48,13 @@ namespace HospitalManagementSystem.Controllers
 
             return RedirectToAction("UserList");
         }
+
         [HttpGet]
         public IActionResult UserAddEdit(int? UserId)
         {
             UserModel um = new UserModel();
 
-            if(UserId != null && UserId > 0)
+            if (UserId != null && UserId > 0)
             {
                 string connectionString = _configuration.GetConnectionString("DbConnect");
                 using SqlConnection connection = new SqlConnection(connectionString);
@@ -62,7 +63,7 @@ namespace HospitalManagementSystem.Controllers
                 SqlCommand command = new SqlCommand("PR_USR_SelectByID", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add("@UserID", SqlDbType.Int).Value = UserId;
-            
+
                 SqlDataReader reader = command.ExecuteReader();
 
                 if (reader.Read())
@@ -76,7 +77,7 @@ namespace HospitalManagementSystem.Controllers
                 }
             }
 
-            return View("UserAddEdit",um);
+            return View("UserAddEdit", um);
         }
 
         [HttpPost]
@@ -88,43 +89,32 @@ namespace HospitalManagementSystem.Controllers
                 using SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
 
-                SqlCommand command = new SqlCommand
-                {
-                    Connection = connection,
-                    CommandType = CommandType.StoredProcedure
-                };
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
 
                 if (um.UserID > 0)
                 {
-                    // Edit case — use update SP
                     command.CommandText = "PR_USR_UpdateUser";
                     command.Parameters.AddWithValue("@UserID", um.UserID);
                 }
                 else
                 {
-                    // Add case — use insert SP
                     command.CommandText = "PR_USR_AddUser";
-                    command.Parameters.AddWithValue("@Created", DateTime.Now); // Only needed for insert
-                    command.Parameters.AddWithValue("@Modified", DateTime.Now); // Needed here
+                    command.Parameters.AddWithValue("@UserName", um.UserName);
+                    command.Parameters.AddWithValue("@Password", um.Password);
+                    command.Parameters.AddWithValue("@Email", um.Email);
+                    command.Parameters.AddWithValue("@MobileNo", um.MobileNo);
+                    command.Parameters.AddWithValue("@IsActive", um.IsActive);
                 }
-
-                // Common Parameters
-                command.Parameters.AddWithValue("@UserName", um.UserName);
-                command.Parameters.AddWithValue("@Password", um.Password);
-                command.Parameters.AddWithValue("@Email", um.Email);
-                command.Parameters.AddWithValue("@MobileNo", um.MobileNo);
-                command.Parameters.AddWithValue("@IsActive", um.IsActive);
 
                 if (um.UserID == 0)
                 {
-                    command.Parameters.AddWithValue("@Modified", DateTime.Now); // Only add if inserting
+                    command.Parameters.AddWithValue("@Modified", DateTime.Now);
                 }
-
+                command.ExecuteNonQuery();
+                return RedirectToAction("UserList");
             }
-
             return View("UserAddEdit", um);
         }
-
-
     }
 }

@@ -1,7 +1,7 @@
-﻿@model HospitalManagementSystem.Models.UserModel
+﻿@model HospitalManagementSystem.Models.DoctorModel
 
 @{
-    ViewData["Title"] = "Add/Edit User";
+    ViewData["Title"] = Model.DoctorID == 0 ? "Add New Doctor" : "Edit Doctor";
 }
 
 <!DOCTYPE html>
@@ -13,21 +13,21 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="mb-4">User Add/Edit</h2>
+        <h2 class="mb-4">@ViewData["Title"]</h2>
 
-        <form asp-action="UserAddEdit" asp-controller="User" method="post">
-            <input type="hidden" asp-for="UserID" />
+        <form asp-action="DoctorAddEdit" asp-controller="Doctor" method="post">
+            <input type="hidden" asp-for="DoctorID" />
 
             <div class="mb-3">
-                <label asp-for="UserName" class="form-label"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
-                <label asp-for="Password" class="form-label"></label>
-                <input asp-for="Password" type="password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+                <label asp-for="Phone" class="form-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
@@ -37,19 +37,32 @@
             </div>
 
             <div class="mb-3">
-                <label asp-for="MobileNo" class="form-label"></label>
-                <input asp-for="MobileNo" class="form-control" />
-                <span asp-validation-for="MobileNo" class="text-danger"></span>
+                <label asp-for="Qualification" class="form-label"></label>
+                <input asp-for="Qualification" class="form-control" />
+                <span asp-validation-for="Qualification" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Specialization" class="form-label"></label>
+                <input asp-for="Specialization" class="form-control" />
+                <span asp-validation-for="Specialization" class="text-danger"></span>
             </div>
 
             <div class="form-check mb-3">
                 <input asp-for="IsActive" class="form-check-input" />
-                <label asp-for="IsActive" class="form-check-label"></label>
+                <label asp-for="IsActive" class="form-check-label">Is Active</label>
             </div>
 
             <button type="submit" class="btn btn-primary">Save</button>
-            <a asp-action="UserList" class="btn btn-secondary">Cancel</a>
+            <a asp-action="DoctorList" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
+
+    <!-- Ensure client-side validation scripts are included -->
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
 </body>
 </html>

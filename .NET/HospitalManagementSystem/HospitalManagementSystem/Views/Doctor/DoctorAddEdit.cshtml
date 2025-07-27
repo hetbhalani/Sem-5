@@ -1,1 +1,62 @@
-﻿<h1>Doctor Add Edit Page</h1>
+﻿@model HospitalManagementSystem.Models.DoctorModel
+
+@{
+    ViewData["Title"] = Model.DoctorID == 0 ? "Add New Doctor" : "Edit Doctor";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="DoctorAddEdit" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label for="Name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" id="Name" class="form-control" asp-for="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Phone" class="col-sm-2 control-label">Phone Number</label>
+        <div class="col-sm-10">
+            <input type="text" id="Phone" class="form-control" asp-for="Phone" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" id="Email" class="form-control" asp-for="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Qualification" class="col-sm-2 control-label">Qualification</label>
+        <div class="col-sm-10">
+            <input type="text" id="Qualification" class="form-control" asp-for="Qualification" />
+            <span asp-validation-for="Qualification" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Specialization" class="col-sm-2 control-label">Specialization</label>
+        <div class="col-sm-10">
+            <input type="text" id="Specialization" class="form-control" asp-for="Specialization" />
+            <span asp-validation-for="Specialization" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="IsActive" class="col-sm-2 control-label">Is Active</label>
+        <div class="col-sm-10">
+            <input type="checkbox" id="IsActive" class="form-check-input" asp-for="IsActive" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-10 offset-sm-2">
+            <button type="submit" class="btn btn-primary">@ViewData["Title"]</button>
+        </div>
+    </div>
+</form>
