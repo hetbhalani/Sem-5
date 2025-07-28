@@ -74,6 +74,7 @@ namespace Hospital_Management_System.Controllers
                     dm.Qualification = reader["Qualification"].ToString();
                     dm.Specialization = reader["Specialization"].ToString();
                     dm.IsActive = Convert.ToBoolean(reader["IsActive"]);
+                    dm.UserID = Convert.ToInt32(reader["UserID"]);
                 }
             }
 
@@ -96,6 +97,14 @@ namespace Hospital_Management_System.Controllers
                 {
                     command.CommandText = "PR_DOC_UpdateDoctor";
                     command.Parameters.AddWithValue("@DoctorID", dm.DoctorID);
+                    command.Parameters.AddWithValue("@Name", dm.Name);
+                    command.Parameters.AddWithValue("@Phone", dm.Phone);
+                    command.Parameters.AddWithValue("@Email", dm.Email);
+                    command.Parameters.AddWithValue("@Qualification", dm.Qualification);
+                    command.Parameters.AddWithValue("@Specialization", dm.Specialization);
+                    command.Parameters.AddWithValue("@IsActive", dm.IsActive);
+                    command.Parameters.AddWithValue("@UserID", dm.UserID);
+                    command.Parameters.AddWithValue("@Modified", DateTime.Now);
                 }
                 else
                 {
@@ -106,12 +115,9 @@ namespace Hospital_Management_System.Controllers
                     command.Parameters.AddWithValue("@Qualification", dm.Qualification);
                     command.Parameters.AddWithValue("@Specialization", dm.Specialization);
                     command.Parameters.AddWithValue("@IsActive", dm.IsActive);
+                    command.Parameters.AddWithValue("@UserID", dm.UserID);
                 }
 
-                if (dm.DoctorID == 0)
-                {
-                    command.Parameters.AddWithValue("@Modified", DateTime.Now);
-                }
 
                 command.ExecuteNonQuery();
 

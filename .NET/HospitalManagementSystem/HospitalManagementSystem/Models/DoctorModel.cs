@@ -16,5 +16,7 @@
 
         public bool IsActive { get; set; }
 
+        public int UserID { get; set; }
+
     }
 }
