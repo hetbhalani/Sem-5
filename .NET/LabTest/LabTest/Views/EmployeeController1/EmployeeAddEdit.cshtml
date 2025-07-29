@@ -1,0 +1,90 @@
+﻿@model LabTest.Models.EmployeeModel
+
+<h2 class="text-primary">@((Model.EmployeeID > 0) ? "Edit Employee" : "Add Employee")</h2>
+
+@using (Html.BeginForm("EmployeeAddEdit", "EmployeeController1", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.EmployeeID)
+
+    <div class="mb-3">
+        @Html.LabelFor(m => m.FirstName, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        @Html.LabelFor(m => m.LastName, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        @Html.LabelFor(m => m.PhoneNumber, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        @Html.LabelFor(m => m.DateOfBirth, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(m => m.DateOfBirth, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        @Html.LabelFor(m => m.Gender, new { @class = "form-label" })
+        @Html.DropDownListFor(m => m.Gender, new SelectList(new[] {
+        new { Value = "", Text = "-- Select Gender --" },
+        new { Value = "Male", Text = "Male" },
+        new { Value = "Female", Text = "Female" },
+        new { Value = "Other", Text = "Other" }
+        }, "Value", "Text"), new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Gender, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(m => m.HireDate, new { @class = "form-label" })
+    @Html.TextBoxFor(m => m.HireDate, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+    @Html.ValidationMessageFor(m => m.HireDate, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(m => m.JobTitle, new { @class = "form-label" })
+    @Html.TextBoxFor(m => m.JobTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.JobTitle, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(m => m.Department, new { @class = "form-label" })
+    @Html.TextBoxFor(m => m.Department, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Department, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(m => m.Salary, new { @class = "form-label" })
+    @Html.TextBoxFor(m => m.Salary, new { @class = "form-control", type = "number", step = "1", min = "0" })
+    @Html.ValidationMessageFor(m => m.Salary, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3 form-check">
+    @Html.CheckBoxFor(m => m.IsActive, new { @class = "form-check-input" })
+    @Html.LabelFor(m => m.IsActive, new { @class = "form-check-label" })
+    @Html.ValidationMessageFor(m => m.IsActive, "", new { @class = "text-danger" })
+</div>
+
+<button type="submit" class="btn btn-success">
+    @((Model.EmployeeID > 0) ? "Update Employee" : "Add Employee")
+</button>
+@Html.ActionLink("Cancel", "SelectAllEmployee", "EmployeeController1", null, new { @class = "btn btn-danger" })
+}
+
+@section Scripts {
+    @{
+        Html.RenderPartial("_ValidationScriptsPartial");
+    }
+}
