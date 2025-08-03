@@ -41,6 +41,5 @@ namespace HospitalManagementSystem.Models
         [Display(Name = "Created By User")]
         public int UserID { get; set; }
 
-        public UserModel UserModel { get; set; }
     }
 }

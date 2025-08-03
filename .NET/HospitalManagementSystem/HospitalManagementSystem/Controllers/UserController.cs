@@ -96,6 +96,12 @@ namespace HospitalManagementSystem.Controllers
                 {
                     command.CommandText = "PR_USR_UpdateUser";
                     command.Parameters.AddWithValue("@UserID", um.UserID);
+                    command.Parameters.AddWithValue("@UserName", um.UserName);
+                    command.Parameters.AddWithValue("@Password", um.Password);
+                    command.Parameters.AddWithValue("@Email", um.Email);
+                    command.Parameters.AddWithValue("@MobileNo", um.MobileNo);
+                    command.Parameters.AddWithValue("@IsActive", um.IsActive);
+                    command.Parameters.AddWithValue("@Modified", DateTime.Now);
                 }
                 else
                 {
@@ -105,10 +111,6 @@ namespace HospitalManagementSystem.Controllers
                     command.Parameters.AddWithValue("@Email", um.Email);
                     command.Parameters.AddWithValue("@MobileNo", um.MobileNo);
                     command.Parameters.AddWithValue("@IsActive", um.IsActive);
-                }
-
-                if (um.UserID == 0)
-                {
                     command.Parameters.AddWithValue("@Modified", DateTime.Now);
                 }
                 command.ExecuteNonQuery();
