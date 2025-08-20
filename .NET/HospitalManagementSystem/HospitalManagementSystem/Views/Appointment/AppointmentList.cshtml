@@ -3,6 +3,10 @@
 @model DataTable
 
 <h1>Appointment List</h1>
+<a asp-controller="Appointment" asp-action="ExportToExcel"
+   class="btn btn-success btn-lg shadow-sm">
+    <i class="bi bi-file-earmark-excel me-2"></i>Export Excel
+</a>
 
 
 <table border="1" cellpadding="5" cellspacing="0">

@@ -36,3 +36,11 @@ E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\n
 E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0\HospitalManagementSystem.csproj.AssemblyReference.cache
 E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\net8.0\Hospital.D08A6E9A.Up2Date
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\ClosedXML.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\ClosedXML.Parser.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\ExcelNumberFormat.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\RBush.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\SixLabors.Fonts.dll
+E:\Sem-5-labs\.Net\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\net8.0\System.IO.Packaging.dll

@@ -1,0 +1,24 @@
+﻿<h1>Use AddEdit page</h1>
+@model UserModel
+
+<form method="post" asp-controller="User" asp-action="UserAddEdit">
+    <label>User Name</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <label>Email</label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <br/>
+    <input type="submit" value="Submit" class="btn btn-success" />
+</form>
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+    </tr>
+    <tr>
+        <td>@ViewBag.Name</td>
+        <td>@ViewBag.Email</td>
+    </tr>
+</table>

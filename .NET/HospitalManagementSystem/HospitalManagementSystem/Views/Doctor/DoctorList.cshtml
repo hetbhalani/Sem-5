@@ -6,7 +6,10 @@
 }
 
 <h1>Doctor List</h1>
-
+<a asp-controller="Doctor" asp-action="ExportToExcel"
+   class="btn btn-success btn-lg shadow-sm">
+    <i class="bi bi-file-earmark-excel me-2"></i>Export Excel
+</a>
 <!-- Button to navigate to Add/Edit page -->
 <a href="@Url.Action("DoctorAddEdit", "Doctor")" class="btn btn-success mb-3">Add New Doctor</a>
 

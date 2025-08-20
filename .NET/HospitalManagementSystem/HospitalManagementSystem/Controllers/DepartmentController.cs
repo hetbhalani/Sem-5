@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
+using ClosedXML.Excel;
+
 
 namespace HospitalManagementSystem.Controllers
 {
@@ -142,6 +144,38 @@ namespace HospitalManagementSystem.Controllers
             }
 
             ViewBag.Users = users;
+        }
+        public IActionResult ExportToExcel()
+        {
+            string connectionString = _configuration.GetConnectionString("DbConnect");
+
+            DataTable dt = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("PR_DEPT_SelectAll", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        dt.Load(reader);
+                    }
+                }
+            }
+
+            using (XLWorkbook wb = new())
+            {
+                wb.Worksheets.Add(dt, "Users");
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    stream.Seek(0, SeekOrigin.Begin);
+                    return File(stream.ToArray(),
+                                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                "Users.xlsx");
+                }
+            }
         }
     }
 }
