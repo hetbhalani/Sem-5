@@ -14,10 +14,7 @@ namespace HospitalManagementSystem.Controllers
         {
             _configuration = configuration;
         }
-        public IActionResult AppointmentAddEdit()
-        {
-            return View();
-        }
+        
         public IActionResult AppointmentList()
         {
             string DbConnect = this._configuration.GetConnectionString("DbConnect");
@@ -77,15 +74,37 @@ namespace HospitalManagementSystem.Controllers
                     dm.AppointmentStatus = reader["AppointmentStatus"].ToString();
                     dm.Description = reader["Description"].ToString();
                     dm.SpecialRemarks = reader["SpecialRemarks"].ToString();
-                    dm.UserID = Convert.ToInt32(reader["UserID"]);
+
+                    // Safely read UserID in case the SP returns a conflicting column type/name
+                    object userIdValue = reader["UserID"];
+                    if (userIdValue != DBNull.Value && userIdValue is int)
+                    {
+                        dm.UserID = (int)userIdValue;
+                    }
+                    else
+                    {
+                        // Try alternative alias if the SP uses one (e.g., AppointmentUserID)
+                        try
+                        {
+                            int ordinal = reader.GetOrdinal("AppointmentUserID");
+                            if (!reader.IsDBNull(ordinal))
+                            {
+                                dm.UserID = reader.GetInt32(ordinal);
+                            }
+                        }
+                        catch (IndexOutOfRangeException)
+                        {
+                            // ignore if alias not present
+                        }
+                    }
                 }
             }
 
-            return View("DoctorAddEdit", dm);
+            return View("AppointmentAddEdit", dm);
         }
 
         [HttpPost]
-        public IActionResult DoctorAddEdit(DoctorModel dm)
+        public IActionResult AppointmentAddEdit(AppointmentModel dm)
         {
             if (ModelState.IsValid)
             {
@@ -96,28 +115,28 @@ namespace HospitalManagementSystem.Controllers
                 SqlCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.StoredProcedure;
 
-                if (dm.DoctorID > 0)
+                // Decide between update vs insert based on primary key
+                if (dm.AppointmentID > 0)
                 {
-                    command.CommandText = "PR_APT_UpdateDoctor";
+                    command.CommandText = "PR_APT_Update";
+                    command.Parameters.AddWithValue("@AppointmentID", dm.AppointmentID);
                     command.Parameters.AddWithValue("@DoctorID", dm.DoctorID);
-                    command.Parameters.AddWithValue("@Name", dm.Name);
-                    command.Parameters.AddWithValue("@Phone", dm.Phone);
-                    command.Parameters.AddWithValue("@Email", dm.Email);
-                    command.Parameters.AddWithValue("@Qualification", dm.Qualification);
-                    command.Parameters.AddWithValue("@Specialization", dm.Specialization);
-                    command.Parameters.AddWithValue("@IsActive", dm.IsActive);
+                    command.Parameters.AddWithValue("@PatientID", dm.PatientID);
+                    command.Parameters.AddWithValue("@AppointmentDate", dm.AppointmentDate);
+                    command.Parameters.AddWithValue("@AppointmentStatus", dm.AppointmentStatus);
+                    command.Parameters.AddWithValue("@Description", dm.Description);
+                    command.Parameters.AddWithValue("@SpecialRemarks", dm.SpecialRemarks);
                     command.Parameters.AddWithValue("@UserID", dm.UserID);
-                    command.Parameters.AddWithValue("@Modified", DateTime.Now);
                 }
                 else
                 {
-                    command.CommandText = "PR_APT_AddDoctor";
-                    command.Parameters.AddWithValue("@Name", dm.Name);
-                    command.Parameters.AddWithValue("@Phone", dm.Phone);
-                    command.Parameters.AddWithValue("@Email", dm.Email);
-                    command.Parameters.AddWithValue("@Qualification", dm.Qualification);
-                    command.Parameters.AddWithValue("@Specialization", dm.Specialization);
-                    command.Parameters.AddWithValue("@IsActive", dm.IsActive);
+                    command.CommandText = "PR_APT_Add";
+                    command.Parameters.AddWithValue("@DoctorID", dm.DoctorID);
+                    command.Parameters.AddWithValue("@PatientID", dm.PatientID);
+                    command.Parameters.AddWithValue("@AppointmentDate", dm.AppointmentDate);
+                    command.Parameters.AddWithValue("@AppointmentStatus", dm.AppointmentStatus);
+                    command.Parameters.AddWithValue("@Description", dm.Description);
+                    command.Parameters.AddWithValue("@SpecialRemarks", dm.SpecialRemarks);
                     command.Parameters.AddWithValue("@UserID", dm.UserID);
                 }
 

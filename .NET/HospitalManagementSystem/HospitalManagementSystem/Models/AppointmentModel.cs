@@ -14,14 +14,10 @@ namespace HospitalManagementSystem.Models
         [Display(Name = "Doctor")]
         public int DoctorID { get; set; }
 
-        public DoctorModel DoctorModel { get; set; }
-
         [Required]
         [ForeignKey("PatientModel")]
         [Display(Name = "Patient")]
         public int PatientID { get; set; }
-
-        public PatientModel PatientModel { get; set; }
 
         [Required]
         [DataType(DataType.DateTime)]
@@ -46,8 +42,6 @@ namespace HospitalManagementSystem.Models
         [ForeignKey("UserModel")]
         [Display(Name = "Created By User")]
         public int UserID { get; set; }
-
-        public UserModel UserModel { get; set; }
 
         [Column(TypeName = "decimal(5,2)")]
         [Display(Name = "Total Consulted Amount")]

@@ -1,2 +1,85 @@
-﻿<h1>Appointment Add Edit</h1>
+﻿@model HospitalManagementSystem.Models.AppointmentModel
 
+@{
+    ViewData["Title"] = Model.AppointmentID == 0 ? "Add New Appointment" : "Edit Appointment";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">@ViewData["Title"]</h2>
+
+        <form asp-action="AppointmentAddEdit" asp-controller="Appointment" method="post">
+            <input type="hidden" asp-for="AppointmentID" />
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="DoctorID" class="form-label"></label>
+                    <input asp-for="DoctorID" class="form-control" type="number" />
+                    <span asp-validation-for="DoctorID" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="PatientID" class="form-label"></label>
+                    <input asp-for="PatientID" class="form-control" type="number" />
+                    <span asp-validation-for="PatientID" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="AppointmentDate" class="form-label"></label>
+                    <input asp-for="AppointmentDate" class="form-control" type="datetime-local" />
+                    <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="AppointmentStatus" class="form-label"></label>
+                    <select asp-for="AppointmentStatus" class="form-select">
+                        <option value="">-- Select Status --</option>
+                        <option>Scheduled</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+                        <option>Rescheduled</option>
+                    </select>
+                    <span asp-validation-for="AppointmentStatus" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="SpecialRemarks" class="form-label"></label>
+                <input asp-for="SpecialRemarks" class="form-control" />
+                <span asp-validation-for="SpecialRemarks" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="UserID" class="form-label">User ID</label>
+                    <input asp-for="UserID" class="form-control" type="number" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="TotalConsultedAmount" class="form-label"></label>
+                    <input asp-for="TotalConsultedAmount" class="form-control" type="number" step="0.01" />
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a asp-action="AppointmentList" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
