@@ -1,0 +1,49 @@
+﻿@model System.Data.DataTable
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<div class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h3 class="m-0">Students</h3>
+        <a asp-action="AddEditStudent" class="btn btn-primary">Add Student</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead>
+                <tr class="text-muted small">
+                    <th>Enroll</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Cricket</th>
+                    <th>%</th>
+                    <th>Rajkot</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (System.Data.DataRow row in Model.Rows)
+                {
+                    <tr>
+                        <td class="text-muted">@row["Enrollment"]</td>
+                        <td>@row["Name"]</td>
+                        <td>@row["MobileNo"]</td>
+                        <td>@row["Email"]</td>
+                        <td>@row["Gender"]</td>
+                        <td>@(Convert.ToBoolean(row["PlayingCricket"]) ? "Yes" : "No")</td>
+                        <td>@row["Percentage12th"]%</td>
+                        <td>@(Convert.ToBoolean(row["LiveinRajkot"]) ? "Yes" : "No")</td>
+                        <td class="text-end">
+                            <a asp-action="AddEditStudent" asp-route-enrollmentNo="@row["Enrollment"]" class="btn btn-outline-secondary btn-sm">Edit</a>
+                            <a asp-action="DeleteStudent" asp-route-enrollmentNo="@row["Enrollment"]" class="btn btn-outline-danger btn-sm"
+                               onclick="return confirm('Delete this record?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
